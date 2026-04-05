@@ -1,12 +1,12 @@
 package org.example.week2.observer.observer;
 
-import org.example.week2.observer.interfaces.Observer;
+import org.example.week2.observer.interfaces.ObserverV1;
 
-public class Subscriber implements Observer {
+public class SubscriberV1 implements ObserverV1 {
 
     private String name;
 
-    public Subscriber(String name) {
+    public SubscriberV1(String name) {
         this.name = name;
     }
 

@@ -1,5 +1,5 @@
 package org.example.week2.observer.interfaces;
 
-public interface Observer {
+public interface ObserverV1 {
     void update(String videoTitle);
 }
