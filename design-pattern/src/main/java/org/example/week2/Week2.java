@@ -15,6 +15,12 @@ import org.example.week2.observer.subject.YoutuberV2;
 
 public class Week2 {
 
+    public static void  main(String[] args) {
+        Week2 week2 = new Week2();
+        week2.observerPattern();
+//        week2.decoratorPattern();
+    }
+
     public void observerPattern() {
         // 주체
         YoutuberV1 youtuberV1 = new YoutuberV1();
