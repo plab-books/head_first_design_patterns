@@ -1,6 +1,6 @@
 package org.example.week4.command.attack;
 
-import org.example.game.domain.Character;
+import org.example.week4.command.domain.Character;
 
 public class Thunderbolt implements AttackCommand {
     private final Character attacker;

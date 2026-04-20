@@ -1,8 +1,8 @@
 package org.example.week4.command;
 
-import org.example.game.domain.Character;
-import org.example.game.domain.MonsterFactory;
-import org.example.game.domain.PlayerFactory;
+import org.example.week4.command.domain.Character;
+import org.example.week4.command.domain.MonsterFactory;
+import org.example.week4.command.domain.PlayerFactory;
 import org.example.week4.command.attack.*;
 
 import java.util.Random;

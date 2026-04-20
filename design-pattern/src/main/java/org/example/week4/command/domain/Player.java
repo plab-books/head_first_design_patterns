@@ -1,4 +1,4 @@
-package org.example.game.domain;
+package org.example.week4.command.domain;
 
 public class Player implements Character {
     private final String name;

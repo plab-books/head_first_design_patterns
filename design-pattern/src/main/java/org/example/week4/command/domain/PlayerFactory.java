@@ -1,4 +1,4 @@
-package org.example.game.domain;
+package org.example.week4.command.domain;
 
 import java.util.concurrent.ThreadLocalRandom;
 

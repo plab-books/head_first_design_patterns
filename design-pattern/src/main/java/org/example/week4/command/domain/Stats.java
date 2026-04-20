@@ -1,4 +1,4 @@
-package org.example.game.domain;
+package org.example.week4.command.domain;
 
 public record Stats(int max, int value) {
     public Stats {
