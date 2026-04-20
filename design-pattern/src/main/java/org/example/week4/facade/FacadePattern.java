@@ -1,6 +1,10 @@
 package org.example.week4.facade;
 
-public class FacadePattern {
+import org.example.week4.facade.system.SystemFacade;
 
-    public void play() {}
+public class FacadePattern {
+    public void play() {
+        SystemFacade systemFacade = new SystemFacade();
+        systemFacade.init();
+    }
 }
