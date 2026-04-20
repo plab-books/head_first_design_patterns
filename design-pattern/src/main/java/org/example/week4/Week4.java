@@ -1,6 +1,8 @@
 package org.example.week4;
 
+import org.example.week4.adapter.AdapterPattern;
 import org.example.week4.command.CommandPattern;
+import org.example.week4.facade.FacadePattern;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +20,8 @@ public class Week4 {
                 종료하려면 0을 입력해라.
                 """);
         CommandPattern commandPattern = new CommandPattern();
+        AdapterPattern adapterPattern = new AdapterPattern();
+        FacadePattern facadePattern = new FacadePattern();
 
         BufferedReader br = new BufferedReader(new java.io.InputStreamReader(System.in));
         while (true) {
@@ -30,13 +34,9 @@ public class Week4 {
             }
 
             switch (input) {
-                case 1 ->  commandPattern.play();
-                case 2 -> System.out.println("""
-                    Adapter Pattern은 기존 인터페이스를 사용하여 새로운 인터페이스를 제공하는 디자인 패턴입니다.
-                    """);
-                case 3 -> System.out.println("""
-                    Facade Pattern은 복잡한 시스템을 단순화하기 위해 제공되는 인터페이스를 정의하는 디자인 패턴입니다.
-                    """);
+                case 1 -> commandPattern.play();
+                case 2 -> adapterPattern.play();
+                case 3 -> facadePattern.play();
                 default -> System.out.println("잘못된 입력이다. 1, 2, 3 중 하나를 입력해라.");
             }
         }
