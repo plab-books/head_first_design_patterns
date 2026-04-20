@@ -13,7 +13,39 @@ import org.example.week2.observer.observer.SubscriberV2;
 import org.example.week2.observer.subject.YoutuberV1;
 import org.example.week2.observer.subject.YoutuberV2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+
 public class Week2 {
+
+    public static void  main(String[] args) throws IOException {
+        System.out.println("""
+                이번주는 2주차다. 애송이들아.
+                ----------------------------------
+                1. observer pattern
+                2. decorator pattern
+                -----------------------------------
+                1, 2 중 하나를 입력하면 해당 패턴에 대한 설명이 나온다.
+                종료하려면 0을 입력해라.
+                """);
+        BufferedReader br = new BufferedReader(new java.io.InputStreamReader(System.in));
+        Week2 week2 = new Week2();
+        while (true) {
+            System.out.print("입력: ");
+            int input = Integer.parseInt(br.readLine());
+
+            if (input == 0) {
+                System.out.println("종료한다.");
+                break;
+            }
+
+            switch (input) {
+                case 1 -> week2.observerPattern();
+                case 2 -> week2.decoratorPattern();
+                default -> System.out.println("잘못된 입력이다. 1, 2 중 하나를 입력해라.");
+            }
+        }
+    }
 
     public void observerPattern() {
         // 주체
@@ -78,6 +110,5 @@ public class Week2 {
         beverage2 = new Mocha(beverage2);
         beverage2 = new Whip(beverage2);
         System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
-
     }
 }
